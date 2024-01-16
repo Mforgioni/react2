@@ -20,7 +20,7 @@ const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
                 <h2> {name} </h2>
             </header>
             <picture>
-                <img src={img} alt={name} style={{ width: 100}}/>
+                <img src={img} alt={name} style={{ width: 230}}/>
             </picture>
             <section className='seccion-detalle'>
                 <p> Categoria: {category} </p>
