@@ -1,0 +1,141 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.titulo {
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.carro-nav {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.logo-carrito {
+  border-radius: 14px;
+  margin-right: 1rem;
+  height: 60px;
+}
+
+.boton-contador {
+  color: rgb(253, 253, 253);
+  border-radius: 25px;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+}
+
+.boton-contador:hover {
+  background-color: green;
+}
+
+.boton-agregar {
+  color: rgb(255, 254, 254);
+  border-radius: 25px;
+  padding: 1rem;
+  background-color: rgb(2, 2, 2);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.boton-agregar:hover {
+  background-color: rgb(75, 173, 45);
+}
+
+.contenedor-link a {
+  border: solid black 1px;
+  border-radius: 25px;
+  padding: 0.7rem;
+  color: aliceblue;
+  background-color: black;
+  margin: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.contenedor-link a:hover {
+  background-color: rgb(86, 138, 80);
+}
+
+.seccion-detalle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 14px;
+}
+
+.card-item {
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 30%;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 14px;
+  box-shadow: 12px 12px 8px 2px;
+  border: solid black 1px;
+}
+
+.lista-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.item-detalle {
+  padding: 2rem;
+  margin: auto;
+  width: 40%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 14px;
+  box-shadow: 12px 12px 8px 2px;
+  border: solid rgba(0, 0, 0, 0.384) 1px;
+}
+
+.item-detalle h1 {
+  font-size: 2.3rem;
+}
+
+.ver-detalle {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  border: solid black 1px;
+  padding: 0.5rem;
+  border-radius: 25px;
+  background-color: black;
+}
+
+.ver-detalle:hover {
+  background-color: rgb(52, 117, 52);
+}
+
+.finalizar {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  border: solid black 1px;
+  background-color: black;
+  border-radius: 25px;
+  padding: 0.7rem;
+}
+
+.finalizar:hover {
+  background-color: rgb(9, 75, 9);
+}
+
