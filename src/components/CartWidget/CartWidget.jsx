@@ -1,11 +1,16 @@
 import cart from './assets/carrito2.png'
 
-const CardWidget = () => {
+import { useCart } from '../../context/CartContext'
+
+const CartWidget = () => {
+    const { totalQuantity } = useCart()
+
     return (
-        <div className='carro-nav'>
+        <div className='numeroCarrito'>
             <img className='logo-carrito' src={cart} alt='cart.carrito' />
-            = 0
+            {totalQuantity}
         </div>
     )
 }
-export default CardWidget
+
+export default CartWidget
