@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
-import { getProductById } from "../../asyncMock"
 import { useParams } from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useNotification } from "../../notification/NotificationService"
+import { bd } from "../../services/firebase/firebaseConfig"
+import { getDoc, doc } from "firebase/firestore"
 
 const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
@@ -23,16 +24,20 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        getProductById(productId)
-            .then(response => {
-                setProduct(response)
-            })
-            .catch(error => {
-                showNotification('error', 'Hubo un error cargando los productos')
-            })
-            .finally(() => {
-                setLoading(false)
-            })
+       const productDocument = doc(bd, "products", productId)
+
+       getDoc(productDocument)
+       .then(queryDocumentSnapshot => {
+        const field = queryDocumentSnapshot.data()
+        const productsAdapted = { id: queryDocumentSnapshot.id, ...field}
+        setProduct(productsAdapted)
+       })
+       .catch( error => {
+        showNotification("error", "error de carga")
+       })
+       .finally(() => {
+        setLoading(false)
+       })
     }, [productId])
 
     if(loading) {
