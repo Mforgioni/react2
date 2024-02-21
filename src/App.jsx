@@ -8,6 +8,7 @@ import { CartProvider } from './context/CartContext'
 import { NotificationProvider } from './notification/NotificationService'
 import './App.css'
 import OrderForm from './components/OrderForm/OrderForm'
+import OrderSelect from './components/OrderSelect/OrderSelect'
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
                 <Route path='/detail/:productId' element={<ItemDetailContainer />} />
                 <Route path='/cart' element={<CartView />} />
                 <Route path='/checkout' element={<OrderForm/>} />
-                <Route path='*' element={<h1>ERROR 404</h1>} />
+                <Route path='/OrderSelect' element={<OrderSelect/>} />
               </Routes>
             </CartProvider>
           </NotificationProvider>

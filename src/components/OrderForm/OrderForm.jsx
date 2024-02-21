@@ -9,7 +9,9 @@ const OrderForm = ({ onSubmit }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit(userData);
+    if (typeof onSubmit === "function") {
+      onSubmit(userData);
+    }
   };
 
   const handleChange = (event) => {
